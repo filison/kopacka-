@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="cs">
 <head>
@@ -8,14 +7,49 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header><a href="index.html">← Zpět</a></header>
+    <header>
+        <div class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 0 64 64" width="32">
+                <path fill="#fff" d="M35 3l3 3-6 6 11 11 6-6 3 3-9 9 18 18c2 2 2 5 0 7s-5 2-7 0L36 36l-9 9-3-3 9-9-11-11-9 9-3-3 6-6L3 10l3-3 18 18 6-6-3-3z"/>
+            </svg>
+            Kopačka.cz
+        </div>
+        <nav class="nav">
+            <div class="menu-toggle">☰</div>
+            <ul class="menu">
+                <li><a href="index.html">Domů</a></li>
+                <li><a href="cenik.html">Ceník</a></li>
+                <li><a href="galerie.html">Galerie</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <main>
         <h1>Ceník výkopových prací</h1>
-        <ul>
-            <li>Ruční výkop: 400 Kč/hod</li>
-            <li>Odvoz zeminy: od 1000 Kč</li>
-            <li>Poradenství a zaměření: zdarma</li>
-        </ul>
+        <p>Orientační ceny. Přesná cena vždy podle dohody a rozsahu práce.</p>
+        <table>
+            <tr>
+                <th>Typ výkopu</th>
+                <th>Cena (Kč)</th>
+            </tr>
+            <tr>
+                <td>Základní výkop do 1 m²</td>
+                <td>od 600 Kč</td>
+            </tr>
+            <tr>
+                <td>Výkop kanalizace</td>
+                <td>od 900 Kč / m</td>
+            </tr>
+            <tr>
+                <td>Výkop pro bazén</td>
+                <td>individuální</td>
+            </tr>
+        </table>
     </main>
+
+    <footer>
+        &copy; 2025 Kopačka.cz – Všechna práva vyhrazena
+    </footer>
 </body>
 </html>
