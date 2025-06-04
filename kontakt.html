@@ -1,18 +1,48 @@
-
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontakt – Kopačka.cz</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kontakt – Kopačka.cz</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header><a href="index.html">← Zpět</a></header>
-    <main>
-        <h1>Kontakt</h1>
-        <p>Telefon: +420 777 123 456</p>
-        <p>Email: info@kopacka.cz</p>
-    </main>
+  <header>
+    <div class="logo">
+        <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 0 64 64" width="32">
+            <path fill="#fff" d="M35 3l3 3-6 6 11 11 6-6 3 3-9 9 18 18c2 2 2 5 0 7s-5 2-7 0L36 36l-9 9-3-3 9-9-11-11-9 9-3-3 6-6L3 10l3-3 18 18 6-6-3-3z"/>
+        </svg>
+        Kopačka.cz
+    </div>
+    <nav class="nav">
+        <div class="menu-toggle">☰</div>
+        <ul class="menu">
+            <li><a href="index.html">Domů</a></li>
+            <li><a href="cenik.html">Ceník</a></li>
+            <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Kontaktujte nás</h1>
+    <form action="mailto:tvoje@email.cz" method="post" enctype="text/plain">
+      <label for="name">Jméno:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Zpráva:</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <button type="submit">Odeslat</button>
+    </form>
+  </main>
+
+  <footer>
+    &copy; 2025 Kopačka.cz – Všechna práva vyhrazena
+  </footer>
 </body>
 </html>
