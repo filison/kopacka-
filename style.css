@@ -1,26 +1,45 @@
+:root {
+    --primary-color: #2a2a72;
+    --accent-color: #ffce00;
+    --light-bg: #f4f4f4;
+    --text-color: #333;
+    --header-color: white;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 body {
-    margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f9f9f9;
-    color: #333;
+    background: var(--light-bg);
+    color: var(--text-color);
+    line-height: 1.6;
 }
 
 header {
-    background: #000;
-    color: #fff;
-    padding: 1rem;
+    background: var(--primary-color);
+    color: var(--header-color);
+    padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .logo {
     display: flex;
     align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 .logo svg {
+    height: 32px;
     margin-right: 0.5rem;
 }
 
@@ -30,24 +49,78 @@ header {
     gap: 1rem;
 }
 
-.nav .menu.hidden {
-    display: none;
+.menu a {
+    color: var(--header-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: var(--accent-color);
 }
 
 .menu-toggle {
     display: none;
     cursor: pointer;
+    color: var(--header-color);
+    font-size: 1.5rem;
 }
 
 main {
     padding: 2rem;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+h1, h2 {
+    color: var(--primary-color);
+}
+
+section.intro {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+section.intro h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+section.intro p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+footer {
+    background: var(--primary-color);
+    color: var(--header-color);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
 }
 
 @media (max-width: 768px) {
-    .nav ul {
+    .nav .menu {
         flex-direction: column;
+        display: none;
+        background: var(--primary-color);
+        position: absolute;
+        right: 2rem;
+        top: 60px;
+        width: 200px;
+        padding: 1rem;
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+    .nav .menu.show {
+        display: flex;
     }
     .menu-toggle {
         display: block;
     }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
